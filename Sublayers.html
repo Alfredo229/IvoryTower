@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>Sublayers</title>
+<script>
+function clickMe(){
+	myAxis = Number(document.getElementById("Axis").value);
+
+	myRatio1 = Number(document.getElementById("Offset1").value);
+	myRatio2 = Number(document.getElementById("Offset2").value);
+	theFactor = document.getElementById("Factor").value;
+
+	if(myRatio1 < myRatio2){
+		myRatio1 = Number(document.getElementById("Offset2").value);
+		myRatio2 = Number(document.getElementById("Offset1").value);
+	}
+
+	myLength = 1077 - myAxis;
+	myLength *= theFactor;
+
+	myFactor = Math.floor(myLength / myRatio1);
+
+	for(i=myFactor; i>0; i--){
+		
+		calculatedOffsetA = myRatio1 * i;
+		calculatedOffsetA /= theFactor;
+		calculatedOffsetA += myAxis;
+
+		calculatedOffsetB = myRatio2 * i;
+		calculatedOffsetB /= theFactor;
+		calculatedOffsetB += myAxis;
+		console.log(calculatedOffsetA +" "+ calculatedOffsetB);
+	}
+
+	console.log(" * * * * ");
+
+	myLength = Math.abs(myAxis - 875);
+	myLength *= theFactor;
+
+	myFactor = Math.floor(myLength / myRatio1);
+
+	for(i=myFactor; i>0; i--){
+		
+		calculatedOffsetA = myRatio1 * i;
+		calculatedOffsetA /= theFactor;
+		calculatedOffsetA -= myAxis;
+		calculatedOffsetA = Math.abs(calculatedOffsetA);
+
+		calculatedOffsetB = myRatio2 * i;
+		calculatedOffsetB /= theFactor;
+		calculatedOffsetB -= myAxis;
+		calculatedOffsetB = Math.abs(calculatedOffsetB);
+		console.log(calculatedOffsetA +" "+ calculatedOffsetB);
+	}
+}
+</script>
+<body>
+<table><tr>
+<td>Axis</td>
+<td><input type="text" id="Axis" value="925"></input></td>
+</tr><tr>
+<td>Small Offset</td>
+<td><input type="text" id="Offset1" value="15"></input></td>
+</tr><tr>
+<td>Big Offset</td>
+<td><input type="text" id="Offset2" value="16"></input></td>
+</tr><tr>
+<td>Factor</td>
+<td><input type="text" id="Factor" value="1"></input></td>
+</tr><tr>
+<td><input type="button" onClick="clickMe()" value="Click Me"></input></td>
+</tr></table>
+</body>
+</html>

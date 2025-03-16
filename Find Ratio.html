@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Find Ratio</title>
+<script>
+
+MAXRUNS =10000;
+
+myParameter = 0;
+precision = 0;
+loggedPrecision = 9001;
+savedIndex = MAXRUNS;
+
+function init(){
+	myParameter = Number(document.getElementById("myRatio").value);
+//	console.log(myParameter);
+	for(i=2;i<MAXRUNS;i++){
+		calculated = myParameter * i;
+		precision = Math.abs(Math.round(calculated)/i-myParameter);
+//		console.log(calculated+" "+i);
+//		console.log(precision+" "+loggedPrecision);
+		if(precision < loggedPrecision){
+			savedIndex = i;
+			loggedPrecision = precision;
+//			console.log(loggedPrecision+" "+savedIndex);
+		}
+	}
+	document.getElementById("output").innerHTML = savedIndex+" and "+myParameter * savedIndex;
+}
+</script>
+<head>
+<body>
+<div style="width:50%;margin:auto">
+<h1>This page is intended to determine integers for a ratio, between zero and one</h1>
+<form>
+Ratio
+<input type="text" id="myRatio" value="0.4"></input><br>
+<input type="button" onClick="init()" value="Click"></input><br>
+</form>
+Results<p id="output"></p>
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>Sweep</title>
+<script>
+STATION = "925";
+ANCHOR = "1077";
+
+parm00=0;
+parm01=0;
+parm02=0;
+parm03=0;
+
+value00 = 0;
+value01 = 0;
+
+function Run(){
+	result = new Array(3);
+	result[0] = new Array(5);
+	result[1] = new Array(5);
+	result[2] = new Array(5);
+
+	parm00=document.getElementById("field01").value;
+	parm01=document.getElementById("field02").value;
+	parm02=document.getElementById("field03").value;
+	parm03=document.getElementById("field04").value;
+
+	myOffset = ANCHOR - STATION;
+	myOffset *= parm02;
+
+	calculated00 = Math.floor(myOffset / (parm01 * parm03));
+
+	for(i=0;i<5;i++){
+		myIndex02 = calculated00 - i;
+		if(myIndex02 < 1)
+			break;
+		myIndex02 /= parm02;
+		myIndex02 *= (parm01 * parm03);
+		myIndex02 *= parm00;
+		result[0][i] = (myIndex02 / parm00) + Number(STATION);
+		result[1][i] = (myIndex02 / parm01) + Number(STATION);
+		result[2][i] = (myIndex02 / parm03) + Number(STATION);
+	}
+	printOutput();
+}
+
+function printOutput(){
+	myString00 = new String();
+	myString01 = new String();
+	myString02 = new String();
+	for(i=0;i<5;i++){
+		myValue00 = Number(result[i] + STATION);
+		myString00 = myString00 + result[0][i] +", ";
+		myString01 = myString01 + (result[1][i]) +", ";
+		myString02 = myString02 + (result[2][i]) +", ";
+	}
+	document.getElementById("resultsAA").innerHTML = myString00;
+	document.getElementById("resultsAB").innerHTML = myString01;
+	document.getElementById("resultsAC").innerHTML = myString02;
+}
+
+</script>
+</head>
+<body>
+<h1>Relative Offset Sweep</h1>
+<form>
+<table><tr><td>
+Short
+</td><td>
+<input type="text" id="field01" value=""></input>
+</td></tr><tr><td>
+Medium
+</td><td>
+<input type="text" id="field02" value=""></input>
+</td></tr><tr><td>
+Long
+</td><td>
+<input type="text" id="field04" value=""></input>
+</td></tr><table>
+Factor
+<input type="text" id="field03" value="0.5"></input>
+<br>
+<input type="button" value="Click" onClick="Run()"></input>
+</form>
+<p id="resultsAA"></p>
+<p id="resultsAB"></p>
+<p id="resultsAC"></p>
+</body>
+</html>

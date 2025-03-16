@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>My planetary soundboard</title>
+<script>
+theFile = new Audio();
+
+function playMe(){
+	theFile.pause();
+	switch(document.getElementById("myForm").value){
+		case "stop":
+			theFile.pause();
+			return(0);
+		case "00":
+			theFile.src = "Jupiter at Mars.wav";
+			break;
+		case "01":
+			theFile.src = "Earth on Mercury.wav";
+			break;
+		case "02":
+			theFile.src = "Earth on crack on Venus.wav";
+			break;
+		case "03":
+			theFile.src = "Saturn on Jupiter.wav";
+			break;
+		case "04":
+			theFile.src = "Jupiter on Earth.wav";
+			break;
+		default:
+			console.log("Other");
+	}
+	theFile.load();
+	theFile.loop = true;
+	theFile.play();
+}
+
+</script>
+</head>
+<body>
+<form>
+<select id="myForm" onClick="playMe()">
+<option value="stop">Select one</option>
+<option value="00">Jupiter at Mars</option>
+<option value="01">Earth on Mercury</option>
+<option value="02">Earth on crack on Venus</option>
+<option value="03">Saturn on Jupiter</option>
+<option value="04">Jupiter on Earth</option>
+</select>
+<input type="button" onClick="playMe()" value="Play Me"></input>
+</form>
+</body>
+</html>

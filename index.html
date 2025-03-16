@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"> 
+<title>My Website About Frequency Spirals And Fortune Telling</title>
+<script>
+
+function fitSize(){
+ document.getElementById("Navigation").style.height = (window.innerHeight-110) + "px";
+ document.getElementById("contentbox").style.height = (window.innerHeight-110) + "px";
+ document.getElementById("contentbox").style.width = (window.innerWidth-290) + "px";
+}
+
+function LoadPage(targetname){
+ document.getElementById("contentbox").src = targetname + '.html';
+}
+
+</script>
+</head>
+<body style="background-image:url(background.jpg);background-repeat: repeat-y; background-position: right top" onLoad="fitSize()" onResize="fitSize()">
+<div style="text-align:center;height:120px;width:100%;">
+<h1>My Website About Frequency Spirals And Fortune Telling</h1>
+<h2>All rights reserved</h2>
+</div>
+
+<div id="Navigation" style="height:100%;width:250px;float:left;overflow:auto">
+<b>Runes</b><br>
+<a href="#here" onClick="javascript:LoadPage('learn')">Learn about the runes</a><br>
+<a href="#here" onClick="javascript:LoadPage('Map')">Picture Spreads</a><br>
+<a href="#here" onClick="javascript:LoadPage('SequentialRunes')">Sequential Rune Reading</a><br>
+<a href="#here" onClick="javascript:LoadPage('single%20rune')">Single Rune Reading</a><br>
+<a href="#here" onClick="javascript:LoadPage('rune%20feed')">Live Rune Reading</a><br>
+<a href="#here" onClick="javascript:LoadPage('Alternating%20Runes')">Alternating Runes</a><br>
+<b>EVE Online</b><br>
+<a href="#here" onClick="javascript:LoadPage('PI%20Planner')">EvE Online PI planner</a><br>
+<b>Pictures</b><br>
+<a href="#here" onClick="javascript:LoadPage('Gallery/Gallery')">Photo Gallery</a><br>
+<b>Light and colors</b><br>
+<a href="#here" onClick="javascript:LoadPage('Digital%20Light')">Digital Lights</a><br>
+<a href="#here" onClick="javascript:LoadPage('concentric%20color')">Concentric Colors</a><br>
+<a href="#here" onClick="javascript:LoadPage('light%20modulator')">Colorful Swirl</a><br>
+<b>Radio</b><br>
+<a href="#here" onClick="javascript:LoadPage('Selected%20Radio')">Target Radio Chords, Montreal</a><br>
+<a href="#here" onClick="javascript:LoadPage('Radio')">Montreal Radio Chords</a><br>
+<a href="#here" onClick="javascript:LoadPage('New York')">New York Radio Chords</a><br>
+<a href="#here" onClick="javascript:LoadPage('Sacramento')">Sacramento Radio Chords</a><br>
+<a href="#here" onClick="javascript:LoadPage('Moscow')">Moscow Radio Chords</a><br>
+<a href="#here" onClick="javascript:LoadPage('Kiev')">Kiev Radio Chords</a><br>
+<a href="#here" onClick="javascript:LoadPage('Austin')">Austin Radio Chords</a><br>
+<a href="#here" onClick="javascript:LoadPage('Philadelphia')">Philadelphia Radio Chords</a><br>
+<a href="#here" onClick="javascript:LoadPage('Springfield')">Springfield Radio Chords</a><br>
+<a href="#here" onClick="javascript:LoadPage('Chords')">Synchronizations</a><br>
+<a href="#here" onClick="javascript:LoadPage('Radio%20Chords')">All Region Radio Chords</a><br>
+<a href="#here" onClick="javascript:LoadPage('London')">London Radio Chords</a><br>
+<b>Brute force section</b><br>
+<a href="#here" onClick="javascript:LoadPage('Brute Force')">Brute Force</a><br>
+<a href="#here" onClick="javascript:LoadPage('Brute Force Philadelphia')">Brute Force Philadelphia</a><br>
+<a href="#here" onClick="javascript:LoadPage('Brute Force Moscow')">Brute Force Moscow</a><br>
+<b>Sound</b><br>
+<a href="#here" onClick="javascript:LoadPage('threes/Binary Thres')">Threes</a><br>
+<a href="#here" onClick="javascript:LoadPage('Binary/Binary')">Random Binary Chords 16 Bit</a><br>
+<a href="#here" onClick="javascript:LoadPage('Binary%208/Binary%208')">Random Binary Chords 8 Bit</a><br>
+<a href="#here" onClick="javascript:LoadPage('Mah Buttnz/Mah Buttnz')">Buttons for the idiots</a><br>
+<a href="#here" onClick="javascript:LoadPage('mySoundboard/Soundboard')">My Soundboard</a><br>
+<b>Numbers</b><br>
+<a href="#here" onClick="javascript:LoadPage('count')">Multiple Layer Relativity</a><br>
+<a href="#here" onClick="javascript:LoadPage('Cones')">Cone values for a number</a><br>
+<a href="#here" onClick="javascript:LoadPage('factorise')">Decompose a number to factors</a><br>
+<a href="#here" onClick="javascript:LoadPage('find_primes')">Prime numbers</a><br>
+<a href="#here" onClick="javascript:LoadPage('Find Ratio')">Find Ratio</a><br>
+<a href="#here" onClick="javascript:LoadPage('Page')">Relative Offset Calculator</a><br>
+<a href="#here" onClick="javascript:LoadPage('Sublayers')">Sublayers</a><br>
+
+<a href="#here" onClick="javascript:LoadPage('Sweep')">Relative Offset Sweep</a><br>
+<b>Abstract</b><br>
+<a href="Gnaural.txt">Sample soundwave file for Gnaural</a><br>
+<a href="#here" onClick="javascript:LoadPage('thegame')">The Game</a><br>
+<a href="#here" onClick="javascript:LoadPage('Time travel')">Basic Theory</a><br>
+<a href="#here" onClick="javascript:LoadPage('TimeMethod')">Latest radio philosophy</a><br>
+<a href="#here" onClick="javascript:LoadPage('Page3')">Time travel for dummies page 3</a><br>
+<a href="#here" onClick="javascript:LoadPage('Relative Offsets')">Relative Offsets</a><br>
+<a href="#here" onClick="javascript:LoadPage('Drawing Time')">Drawing Time</a><br>
+<a href="#here" onClick="javascript:LoadPage('Abstract00')">Updated theory 2025-03</a><br>
+</div>
+
+<div style="float:left;height:100px;width:100px">
+<iframe frameborder="0" id="contentbox" src="First Page.html">
+</iframe>
+</div>
+<a id="here"></a>
+</body>
+</html>

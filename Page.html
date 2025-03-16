@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>Relative offset calculator</title>
+<script>
+
+OffsetA = 0;
+OffsetB = 0;
+
+function init(){
+	Precision = Number(document.getElementById("field00").value);
+	OffsetA = Number(document.getElementById("field01").value);
+	OffsetB = Number(document.getElementById("field02").value);
+	if(OffsetA > OffsetB){
+		OffsetB = Number(document.getElementById("field01").value);
+		OffsetA = Number(document.getElementById("field02").value);}
+	console.log(OffsetA);
+	Minimum = Number(document.getElementById("field03").value);
+	Maximum = Number(document.getElementById("field04").value);
+	MainOffset = Maximum-Minimum;
+	CalculatedOffset = Math.abs(Maximum - Minimum);
+	CalculatedOffset *= Precision;
+	myFactor = Math.floor(CalculatedOffset / OffsetB);
+	document.getElementById("field05").value = myFactor;
+}
+
+function calculate(){
+	ResultA = 0;
+	ResultB = 0;
+	ResultString = "";
+	myFactor = document.getElementById("field05").value;
+	CalculatedFactor = myFactor / Precision;
+	console.log(OffsetA);
+	console.log(OffsetB);
+	ResultA = Number(Minimum + (OffsetA * CalculatedFactor)).toPrecision(9);
+	ResultB = Number(Minimum + (OffsetB * CalculatedFactor)).toPrecision(9);
+	ResultString = Minimum + " " + ResultA + " " + ResultB;
+	document.getElementById("field06").value = ResultString;
+}
+
+</script>
+<body>
+<h1>Relative offset calculator</h1>
+<h2>Author: Mathieu Foucreault</h2>
+<h2>All rights reserved</h2>
+<table><tr>
+<form>
+<td>Precision</td>
+<td><input type="text" id="field00" value="1"></input></td>
+</tr><tr>
+<td>Relative offset</td>
+<td><input type="text" id="field01" value=""></input></td>
+<td><input type="text" id="field02" value=""></input></td>
+</tr><tr>
+<td>Minimum</td>
+<td><input type="text" id="field03" value="925"></input></td>
+</tr><tr>
+<td>Maximum</td>
+<td><input type="text" id="field04" value="1079"></input></td>
+</tr><tr>
+<td>Factor</td>
+<td><input type="text" id="field05"></input></td>
+<td><input type="button" value="Calculate Factor" onClick="init()"></input></td>
+</tr><tr>
+<td></td>
+<td><input type="text" id="field06"></input></td>
+<td><input type="button" value="Calculate Solve" onClick="calculate()"></input></td>
+</form>
+</tr></table>
+</body>
+</html>

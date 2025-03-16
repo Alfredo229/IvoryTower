@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<!-- See http://gnaural.sourceforge.net -->
+<schedule>
+<gnauralfile_version>1.20101006</gnauralfile_version>
+<gnaural_version>1.0.20110606</gnaural_version>
+<date>Fri Aug 25 13:23:38 2023
+</date>
+<title></title>
+<schedule_description></schedule_description>
+<author></author>
+<totaltime>60</totaltime>
+<voicecount>4</voicecount>
+<totalentrycount>4</totalentrycount>
+<loops>0</loops>
+<overallvolume_left>0.663</overallvolume_left>
+<overallvolume_right>0.663</overallvolume_right>
+<stereoswap>0</stereoswap>
+<graphview>1</graphview>
+<voice>
+<description>210</description>
+<id>0</id>
+<type>0</type>
+<voice_state>0</voice_state>
+<voice_hide>0</voice_hide>
+<voice_mute>0</voice_mute>
+<voice_mono>0</voice_mono>
+<entrycount>1</entrycount>
+<entries>
+<entry parent="0" duration="60" volume_left="0.5" volume_right="0.5" beatfreq="0" basefreq="210" state="0"/>
+</entries>
+</voice>
+<voice>
+<description>330</description>
+<id>1</id>
+<type>0</type>
+<voice_state>0</voice_state>
+<voice_hide>0</voice_hide>
+<voice_mute>0</voice_mute>
+<voice_mono>0</voice_mono>
+<entrycount>1</entrycount>
+<entries>
+<entry parent="1" duration="60" volume_left="0.5" volume_right="0.5" beatfreq="0" basefreq="330" state="0"/>
+</entries>
+</voice>
+<voice>
+<description>3</description>
+<id>2</id>
+<type>0</type>
+<voice_state>0</voice_state>
+<voice_hide>0</voice_hide>
+<voice_mute>0</voice_mute>
+<voice_mono>0</voice_mono>
+<entrycount>1</entrycount>
+<entries>
+<entry parent="2" duration="60" volume_left="0.5" volume_right="0.5" beatfreq="0" basefreq="290" state="0"/>
+</entries>
+</voice>
+<voice>
+<description>4</description>
+<id>3</id>
+<type>0</type>
+<voice_state>1</voice_state>
+<voice_hide>0</voice_hide>
+<voice_mute>0</voice_mute>
+<voice_mono>0</voice_mono>
+<entrycount>1</entrycount>
+<entries>
+<entry parent="3" duration="60" volume_left="0.5" volume_right="0.5" beatfreq="0" basefreq="270" state="0"/>
+</entries>
+</voice>
+</schedule>
