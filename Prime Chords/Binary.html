@@ -8,7 +8,7 @@ running = 0;
 playingId = 0;
 
 myFiles = new Array();
-for(i=0; i<16; i++){
+for(i=1; i<16; i++){
 	myFiles[i] = new Audio();
 	myFiles[i].src = i+".mp3";
 	myFiles[i].load();
@@ -25,8 +25,8 @@ function loop(){
 	if(running == 1)
 		ID = setTimeout(loop,875);
 	playing.pause();
-	playingId = Math.floor(Math.random() * 16);
-	playing.src = myFiles[playingId].src;
+	playingId = Math.floor(Math.random() * 15);
+	playing.src = myFiles[playingId+1].src;
 	playing.play();
 }
 
