@@ -72,9 +72,9 @@ function SingleRune(){
 }
 
 function printOutput(runeId){
-	document.getElementById("rune0"+(index+1)).src = rune[runeId].src;
-	document.getElementById("runeid0"+(index+1)).innerHTML = name2[runeId];
-	document.getElementById("runetext0"+(index+1)).innerHTML = line[runeId];
+	document.getElementById("rune01").src = rune[runeId].src;
+	document.getElementById("runeid01").innerHTML = name2[runeId];
+	document.getElementById("runetext01").innerHTML = line[runeId];
 	if(index == 0){
 		index = 1;
 	}else{
@@ -84,9 +84,9 @@ function printOutput(runeId){
 
 function clearOutput(){
  for(i=0; i<MAXRUNES; i++){
-  document.getElementById("rune0"+(i+1)).src = "Runes/blank.jpg";
-  document.getElementById("runeid0"+(i+1)).innerHTML = "Blank";
-  document.getElementById("runetext0"+(i+1)).innerHTML = "";
+  document.getElementById("rune01").src = "Runes/blank.jpg";
+  document.getElementById("runeid01").innerHTML = "Blank";
+  document.getElementById("runetext01").innerHTML = "";
   index=0;
   picked= new Array(23);
  }
@@ -99,11 +99,13 @@ function PullOne(){
  
  if(index < MAXRUNES){
   pointer = Random(24-index);
+
 /*  for(i=0; i <= pointer; i++){
    if(picked[i] == 1)
     pointer++;
   }
   picked[pointer] = 1;*/
+
   printOutput(pointer);
 }}
 
@@ -150,6 +152,10 @@ function PullOne(){
  <option value = "P22">Picture set 22</option>
  <option value = "P23">Picture set 23</option>
  <option value = "P24">Picture set 24</option>
+ <option value = "P25">Picture set 25</option>
+ <option value = "P26">Picture set 26</option>
+ <option value = "P27">Picture set 27</option>
+ <option value = "P28">Picture set 28</option>
 </select>
 </form>
 </div>
