@@ -3,6 +3,7 @@
 <title>Sublayers</title>
 <script>
 function clickMe(){
+	MyOutput = "";
 	myAxis = Number(document.getElementById("Axis").value);
 
 	myRatio1 = Number(document.getElementById("Offset1").value);
@@ -28,10 +29,11 @@ function clickMe(){
 		calculatedOffsetB = myRatio2 * i;
 		calculatedOffsetB /= theFactor;
 		calculatedOffsetB += myAxis;
-		console.log(calculatedOffsetA +" "+ calculatedOffsetB);
+		MyOutput = MyOutput + " " + calculatedOffsetA +" "+ calculatedOffsetB + '<br>';
+//		console.log(calculatedOffsetA +" "+ calculatedOffsetB);
 	}
 
-	console.log(" * * * * ");
+	MyOutput = MyOutput + "*****" + '<br>';
 
 	myLength = Math.abs(myAxis - 875);
 	myLength *= theFactor;
@@ -49,8 +51,10 @@ function clickMe(){
 		calculatedOffsetB /= theFactor;
 		calculatedOffsetB -= myAxis;
 		calculatedOffsetB = Math.abs(calculatedOffsetB);
-		console.log(calculatedOffsetA +" "+ calculatedOffsetB);
+		MyOutput = MyOutput + " " + calculatedOffsetA +" "+ calculatedOffsetB + '<br>';
+//		console.log(calculatedOffsetA +" "+ calculatedOffsetB);
 	}
+	document.getElementById("TheOutput").innerHTML = MyOutput;
 }
 </script>
 <body>
@@ -69,5 +73,6 @@ function clickMe(){
 </tr><tr>
 <td><input type="button" onClick="clickMe()" value="Click Me"></input></td>
 </tr></table>
+<p id="TheOutput"></p>
 </body>
 </html>
