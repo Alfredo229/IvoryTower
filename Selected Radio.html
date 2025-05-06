@@ -134,7 +134,7 @@ needs to swipe the array and keep pushing the higher numbers until... no
 Start at the best result then push if it finds something higher (golf)*/
 function validate(){
 //	if(calculatedOffset <= result[0] && favoriteList[resultIndexC[0]] != pointA){
-	if(calculatedOffset <= result[0]){
+	if(calculatedOffset < result[0] || (calculatedOffset == 0 && favoriteList[resultIndexC[0]] != pointA)){
 		//moves the object up one on the precision scale
 		for(g=2; g>0; g--){
 			result[g] = result[g-1]
